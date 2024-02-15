@@ -20,7 +20,7 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: pip install --upgrade -r requirements.txt
-      - run: mkdocs build
+      - run: mkdocs build --site-dir _site
       - uses: actions/upload-pages-artifact@v3      
   deploy:
     environment:
